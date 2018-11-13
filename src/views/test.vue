@@ -1,12 +1,10 @@
 <template>
-    <div class="home">
-      
-        <router-link to='/test'>homehomehomehomehome</router-link>
+    <div class="test">
+        testtesttesttesttesttesttesttesttesttesttest
     </div>
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
 export default {
   data () {
     return {
@@ -14,7 +12,6 @@ export default {
     }
   },
   created () {
-    this.changeLoginState()
   },
   components: {
 
@@ -25,9 +22,6 @@ export default {
 
   },
   methods: {
-    ...mapMutations({
-      changeLoginState: 'add'
-    })
   },
   watch: {
 
@@ -38,7 +32,7 @@ export default {
 </script>
 
 <style lang='less'>
-.home {
+.test {
   font-size: 10px;
   color: @color;
   display: flex;

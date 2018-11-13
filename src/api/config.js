@@ -1,9 +1,11 @@
 import axios from 'axios'
 import baseConfig from '../../public/static/config'
-import { vue as vm } from '@/main'
+import Vue from 'vue'
 import { getStore } from '@/lib/utils'
 import router from '@/router'
 // import Cookies from 'js-cookie'
+
+const vm = new Vue()
 
 const instance = axios.create({
   timeout: 1500,
@@ -25,7 +27,6 @@ instance.interceptors.request.use(
     config.headers.accessToken = accessToken || ''
     // console.log(accessToken)
     config.headers.idFintechUmUser = idFintechUmUser || ''
-
     vm.$toast.show({
       type: 'loading',
       text: '正在加载...',

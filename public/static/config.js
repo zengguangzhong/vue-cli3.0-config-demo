@@ -1,4 +1,4 @@
-//api
+// api
 let apiBaseUrl = ''
 
 if (process.env.VUE_APP_MODE === 'production') {

@@ -1,24 +1,26 @@
 <template>
   <div id="app">
-    <img class="ignore" alt="Vue logo"
-      src="./assets/logo.png">
+    <img class="ignore"
+      alt="Vue logo"
+      src="./assets/logo.png" />
     <p>app</p>
+
+
     <div class="box">box</div>
-    <!-- <HelloWorld msg="Welcome to Your Vue.js App"/> -->
     <router-view />
   </div>
 </template>
 
 <script>
 // import HelloWorld from './components/HelloWorld.vue'
-import { mapState, mapMutations, mapActions, mapGetters } from 'vuex'
+import { mapState, mapMutations } from 'vuex'
 import { Types as T } from './store/index'
 
 export default {
   name: 'app',
   date () {
     return {
-
+      app: 'app--------------'
     }
   },
   computed: {
@@ -32,19 +34,23 @@ export default {
   components: {
   },
   created: [
-    function() {
-      console.log(1)
+    function () {
+
     },
-    function() {
+    function () {
       console.log(2)
     }
   ],
+  mounted() {
+    // api.registerUser().then(data => {
+    //   debugger
+    // })
+  },
   methods: {
     ...mapMutations({
       changeLoginState: T.CHANGE_LOGIN_STATE
     })
-  },
-  mounted () { }
+  }
 }
 </script>
 
@@ -69,8 +75,8 @@ export default {
   .ignore {
     display: block;
     position: relative;
-    width:300px;
-    height:300px;
+    width: 300px;
+    height: 300px;
     &:after {
       content: '';
       // display: block;

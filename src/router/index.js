@@ -4,6 +4,7 @@ import Router from 'vue-router'
 // import Cookies from 'js-cookie'
 
 const Home = () => import('@views/home.vue')
+const Test = () => import('@views/test.vue')
 
 Vue.use(Router)
 
@@ -15,6 +16,11 @@ const router = new Router({
       path: '/',
       name: 'home',
       component: Home
+    },
+    {
+      path: '/test',
+      name: 'test',
+      component: Test
     }
   ]
 })

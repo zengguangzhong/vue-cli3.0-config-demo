@@ -18,11 +18,11 @@ if ('addEventListener' in document) {
 
 window.env = process.env.NODE_ENV
 
-if (process.env.VUE_APP_MODE !== 'production') {
-  let VConsole = require('vconsole')
-  /* eslint-disable no-new */
-  new VConsole()
-}
+// if (process.env.VUE_APP_MODE !== 'production') {
+//   let VConsole = require('vconsole')
+//   /* eslint-disable no-new */
+//   new VConsole()
+// }
 
 Vue.config.productionTip = false
 
@@ -57,8 +57,10 @@ Vue.config.productionTip = false
 
 sync(store, router)
 
-export const vue = new Vue({
+new Vue({
   router,
   store,
   render: h => h(App)
 }).$mount('#app')
+
+console.log('--------------------------------')
