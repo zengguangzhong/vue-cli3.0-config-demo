@@ -1,0 +1,3 @@
+export default{
+  CHANGE_LOGIN_STATE: 'CHANGE_LOGIN_STATE'
+}
