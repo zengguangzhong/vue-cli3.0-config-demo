@@ -6,7 +6,7 @@
 </template>
 
 <script>
-import { mapMutations } from 'vuex'
+// import { mapMutations } from 'vuex'
 export default {
   data () {
     return {
@@ -14,7 +14,7 @@ export default {
     }
   },
   created () {
-    this.changeLoginState()
+    // this.changeLoginState()
   },
   components: {
 
@@ -25,9 +25,9 @@ export default {
 
   },
   methods: {
-    ...mapMutations({
-      changeLoginState: 'add'
-    })
+    // ...mapMutations({
+    //   changeLoginState: 'add'
+    // })
   },
   watch: {
 
